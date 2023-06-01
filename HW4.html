@@ -1,0 +1,50 @@
+HW4
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Action and Canvas Application Example</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Action and Canvas Application Example</h1>
+  
+  <h2>Form with Different Actions</h2>
+  
+  <form action="submit_get.html" method="get" target="_blank">
+    <label for="getInput">Get Form:</label>
+    <input type="text" id="getInput" name="getInput">
+    <input type="submit" value="Submit Get">
+  </form>
+  
+  <form action="submit_post.html" method="post" target="_blank">
+    <label for="postInput">Post Form:</label>
+    <input type="text" id="postInput" name="postInput">
+    <input type="submit" value="Submit Post">
+  </form>
+  
+  <h2>Canvas Application</h2>
+  
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+  
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    
+    context.fillStyle = "#ff0000";
+    context.fillRect(50, 50, 100, 100);
+    
+    context.fillStyle = "#00ff00";
+    context.fillRect(150, 150, 100, 100);
+    
+    context.fillStyle = "#0000ff";
+    context.fillRect(250, 250, 100, 100);
+  </script>
+  
+</body>
+</html>
